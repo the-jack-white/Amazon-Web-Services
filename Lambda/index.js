@@ -30,9 +30,6 @@ function addToTextTable() {
   labelData.forEach(function(label) {
     labels.push(label.Name)
   });
-  /*let emotions = faceDetails[0]["Emotions"];
-  let ageRange = faceDetails[0]["AgeRange"];
-  let gender = faceDetails[0]["Gender"];*/
   let detectedText = textDetect[0]["DetectedText"];
   let detectedConf = textDetect[0]["Confidence"];
 
@@ -44,14 +41,6 @@ function addToTextTable() {
       timestamp: new Date().getTime(),
       PrimaryDetect: detectedText,
       PrimaryConf: detectedConf,
-      /*emotionType1: emotions[0].Type,
-      emotionConf1: emotions[0].Confidence,
-      emotionType2: emotions[1].Type,
-      emotionConf2: emotions[1].Confidence,
-      ageLow: ageRange.Low,
-      ageHigh: ageRange.High,
-      genderValue: gender.Value,
-      genderConf: gender.Confidence,*/
       labels: labels
     }
   };
